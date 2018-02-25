@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Juomat</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <h3>Meillä on seuraavaat juomat</h3>
+        <ul>
+            <li th:each="juoma: ${lista}">
+                <a th:href="${'/juomat/' + juoma.id}"><span th:text="${juoma.nimi}">linkki</span></a>
+            </li>
+        </ul>
+        
+        <h3>Haluatko lisätä juoman?</h3>
+        
+        <form method="POST" action="/juomat">
+            Juoman nimi:<br/>
+            <input type="text" name="nimi"/><br/>
+            Valmistusohje:<br/>
+            <input type="text" name="valmistusohje"/><br/>
+            <input type="submit" value="Lisää"/>
+        </form>
+        
+        <p><a href="/">Etusivulle</a></p>
+    </body>
+</html>
