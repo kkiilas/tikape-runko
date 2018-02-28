@@ -2,4 +2,4 @@
 
 Tietokantojen perusteet -kurssilla tehtävän web-sovelluksen pohja.
 
-jkhalkjdhflaksjdhfalskjdhfa
+Harjoitustehtävä 2.
